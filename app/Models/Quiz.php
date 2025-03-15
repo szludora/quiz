@@ -9,6 +9,5 @@ class Quiz extends Model
     protected $fillable = [
         'english',
         'serbian',
-        'isCorrect'
     ];
 }

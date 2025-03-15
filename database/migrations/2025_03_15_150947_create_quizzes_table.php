@@ -13,7 +13,6 @@ return new class extends Migration
             $table->id();
             $table->string('english');
             $table->string('serbian');
-            $table->boolean('isCorrect')->default(false);
             $table->timestamps();
         });
     }
