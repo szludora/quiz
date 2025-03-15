@@ -2,22 +2,35 @@
 
 namespace Database\Seeders;
 
+use App\Models\Quiz;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
+        User::create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
         ]);
+
+        $quizzes = [
+            ['english' => 'happy', 'serbian' => 'srećan'],
+            ['english' => 'nice', 'serbian' => 'lijepo'],
+            ['english' => 'friend', 'serbian' => 'prijatelju'],
+            ['english' => 'explosion', 'serbian' => 'eksplozija'],
+            ['english' => 'carrot', 'serbian' => 'šargarepa'],
+            ['english' => 'car', 'serbian' => 'auto'],
+            ['english' => 'soldier', 'serbian' => 'vojnik'],
+            ['english' => 'fear', 'serbian' => 'strah'],
+            ['english' => 'relativity', 'serbian' => 'relativnost'],
+            ['english' => 'book', 'serbian' => 'knjiga'],
+            ['english' => 'Earth', 'serbian' => 'Zemlja'],
+            ['english' => 'speed limit', 'serbian' => 'ograničenje brzine'],
+        ];
+
+        foreach ($quizzes as $quiz) {
+            Quiz::create($quiz);
+        }
     }
 }
