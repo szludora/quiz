@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Col, Container, Row } from "react-bootstrap";
+import weborigo from "./assets/logo/weborigo.png";
+import img from "./assets/imgs/animals.png";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import like from "./assets/icons/like.png";
+import dislike from "./assets/icons/dislike.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container className="app">
+      <img src={weborigo} alt="weborigo" id="logo" />
+      <Container className="card">
+        <Col className="cardContent">
+          <Row className="quizImage">
+            <img src={img} alt="quiz image" />
+          </Row>
+
+          <Row className="formRow">
+            <Form className="form">
+              <Form.Label>happy</Form.Label>
+              <Form.Control type="text" className="input" />
+              <Button variant="primary" type="submit" className="button">
+                Let's see
+              </Button>
+            </Form>
+          </Row>
+
+          <Row className="score">
+            <Col className="rightWrapper">
+              <img src={like} alt="right" />
+              <span>4 / 20</span>
+            </Col>
+            <Col className="wrongWrapper">
+              <img src={dislike} alt="wrong" />
+              <span>16 / 20</span>
+            </Col>
+          </Row>
+        </Col>
+      </Container>
+    </Container>
+  );
 }
 
-export default App
+export default App;

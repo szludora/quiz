@@ -1,42 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/font/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+  min-width: 100dvw;
+  min-height: 100dvh;
+  font-family: roboto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.button {
+  background-color: var(--color-main);
+  border: unset;
+  width: 12em;
+  font-weight: 700;
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50em;
+  padding: 1em 0 2em 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
 }
 
-.read-the-docs {
-  color: #888;
+.cardContent {
+  width: 60%;
+}
+
+#logo {
+  width: 21em;
+  margin-bottom: 2em;
+}
+
+.quizImage img {
+  padding: 0;
+  width: 100%;
+  border-radius: 0.4em;
+  box-shadow: var(--box-shadow-pos-bot) rgba(var(--primary-color), 0.12);
+}
+
+.button:hover {
+  background-color: var(--color-main-hover);
+}
+
+.formRow {
+  padding: 0;
+}
+
+.form {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  box-shadow: var(--box-shadow-pos-top) rgba(var(--secondary-color), 0.3),
+    var(--box-shadow-pos-bot) rgba(var(--primary-color), 0.3);
+  margin-bottom: 2em;
+  border: transparent 0.2em solid;
+  width: 98%;
+}
+
+.input:focus {
+  box-shadow: unset;
+  border: solid 0.2em rgba(var(--primary-color), 0.6);
+}
+
+.form-label {
+  font-weight: 600;
+  margin: 1em 0 1em 0;
+}
+
+.score img {
+  width: 1em;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  color: var(--color-main);
+  font-weight: 300;
+}
+
+.score span {
+  font-size: 0.7em;
+  width: 4em;
+}
+
+.rightWrapper,
+.wrongWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4em;
 }
