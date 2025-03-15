@@ -13,6 +13,18 @@ function App() {
       <img src={weborigo} alt="weborigo" id="logo" />
       <Container className="card">
         <Col className="cardContent">
+          <Row className="mobileView">
+            <Row className="score">
+              <Col className="rightWrapper">
+                <img src={like} alt="right" />
+                <span>4 / 20</span>
+              </Col>
+              <Col className="wrongWrapper">
+                <img src={dislike} alt="wrong" />
+                <span>16 / 20</span>
+              </Col>
+            </Row>
+          </Row>
           <Row className="quizImage">
             <img src={img} alt="quiz image" />
           </Row>
@@ -26,16 +38,17 @@ function App() {
               </Button>
             </Form>
           </Row>
-
-          <Row className="score">
-            <Col className="rightWrapper">
-              <img src={like} alt="right" />
-              <span>4 / 20</span>
-            </Col>
-            <Col className="wrongWrapper">
-              <img src={dislike} alt="wrong" />
-              <span>16 / 20</span>
-            </Col>
+          <Row className="desktopView">
+            <Row className="score">
+              <Col className="rightWrapper">
+                <img src={like} alt="right" />
+                <span>4 / 20</span>
+              </Col>
+              <Col className="wrongWrapper">
+                <img src={dislike} alt="wrong" />
+                <span>16 / 20</span>
+              </Col>
+            </Row>
           </Row>
         </Col>
       </Container>

@@ -5,6 +5,7 @@
 }
 
 .app {
+  padding: 2em 0;
   min-width: 100dvw;
   min-height: 100dvh;
   font-family: roboto;
@@ -17,11 +18,15 @@
   font-weight: 700;
 }
 
+.mobileView {
+  display: none;
+}
+
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 50em;
+  max-width: min(60%, 85em);
   padding: 1em 0 2em 0;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
 }
@@ -31,7 +36,7 @@
 }
 
 #logo {
-  width: 21em;
+  max-width: 21em;
   margin-bottom: 2em;
 }
 
@@ -40,6 +45,7 @@
   width: 100%;
   border-radius: 0.4em;
   box-shadow: var(--box-shadow-pos-bot) rgba(var(--primary-color), 0.12);
+  margin: auto auto;
 }
 
 .button:hover {
@@ -56,6 +62,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto auto;
 }
 
 .input {
@@ -80,6 +87,10 @@
   width: 1em;
 }
 
+.desktopView {
+  justify-content: center;
+}
+
 .score {
   display: flex;
   justify-content: center;
@@ -87,6 +98,7 @@
   margin-top: 1em;
   color: var(--color-main);
   font-weight: 300;
+  width: 17em;
 }
 
 .score span {
@@ -94,10 +106,130 @@
   width: 4em;
 }
 
-.rightWrapper,
+.rightWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
 .wrongWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4em;
+  justify-content: end;
+  align-items: end;
+}
+
+@media screen and (max-width: 23.75rem) {
+  body {
+    padding: 0;
+  }
+
+  .app {
+    padding: 0;
+  }
+
+  .card {
+    max-width: unset;
+    width: 90dvw;
+    height: auto;
+    border-radius: 1.7em;
+    padding: 0.8em 0 1em 0;
+  }
+
+  #logo {
+    width: 90dvw;
+    margin: 1.6em 0 1em 0;
+  }
+
+  .cardContent {
+    width: 78%;
+  }
+
+  .input {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1.2em;
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.4em;
+    font-size: 0.66em;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  .form-label {
+    font-size: 0.66em;
+  }
+
+  .mobileView {
+    display: flex;
+  }
+
+  .desktopView {
+    display: none;
+  }
+
+  .score {
+    width: 100%;
+    padding: 0;
+    margin: unset;
+    margin-bottom: 1em;
+  }
+
+  .wrongWrapper {
+    justify-content: end;
+    padding: 0;
+  }
+  .rightWrapper {
+    justify-content: start;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 80rem) and (min-width: 23.751rem) {
+  body {
+    padding: 0;
+  }
+  .app {
+    padding: 0;
+  }
+  .card {
+    max-width: unset;
+    width: 90dvw;
+    padding: 2em 0 1.2em 0;
+  }
+  .cardContent {
+    width: 90dvw;
+  }
+  .quizImage img {
+    width: clamp(30%, 17em, 100%);
+    max-width: 56dvw;
+  }
+
+  .button {
+    width: clamp(10%, 10rem, 100%);
+  }
+
+  .form {
+    max-width: 70dvw;
+  }
+
+  .input {
+    padding: 0.1em;
+    width: unset;
+    width: clamp(60%, 25rem, 100%);
+  }
+
+  .form-label,
+  .button {
+    font-size: 0.83em;
+  }
+
+  #logo {
+    width: 14.5em;
+    margin: 2em 0 2em 0;
+  }
 }
