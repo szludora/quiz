@@ -1,0 +1,21 @@
+:root {
+  --color-main: #ff6700;
+  --color-main-hover: #eb5e00;
+  --box-shadow-pos-top: 6px -6px 10px;
+  --box-shadow-pos-bot: -6px 6px 10px;
+  --primary-color: 255, 103, 0;
+  --secondary-color: 231, 190, 163;
+
+  text-align: center;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  background-color: var(--color-main);
+}

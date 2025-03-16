@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/font/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+}
+
+.app {
+  padding: 2em 0;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  font-family: roboto;
+}
+
+#logo {
+  max-width: 21em;
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 80rem) and (min-width: 23.751rem) {
+  body {
+    padding: 0;
+  }
+  .app {
+    padding: 0;
+  }
+
+  #logo {
+    width: 90dvw;
+    margin: 1.6em 0 1em 0;
+  }
+}
+
+@media screen and (max-width: 23.75rem) {
+  body {
+    padding: 0;
+  }
+
+  .app {
+    padding: 0;
+  }
+
+  #logo {
+    width: 14.5em;
+    margin: 2em 0 2em 0;
+  }
+}
